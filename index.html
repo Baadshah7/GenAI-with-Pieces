@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funny Private College Engineering Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .show {
+            opacity: 1;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Click the Button to Know a Funny Private College Engineering Fact</h1>
+        <button onclick="generateFact()">Generate Fact</button>
+        <p id="fact"></p>
+    </div>
+
+    <script>
+        const factsData = {
+            "facts": [
+                "The **canteen** is probably bigger than the library. Guess where you'll spend most of your time?",
+                "The Wi-Fi works perfectly **when you're not studying** and disappears just when you need it for research.",
+                "The **most famous** subject? It's the one with the **easiest** assignment – and the longest deadlines!",
+                "The **attendance requirement** is a little stricter than your diet plan.",
+                "No one knows where the **project** actually ends, but the deadline is always **right around the corner**.",
+                "We often say 'I’ll study later', but our real exams are about **caffeine consumption** and **surviving group projects**.",
+                "When the professor says ‘It’s a simple topic’, be prepared for a **3-hour lecture** on something that you’ll never need again.",
+                "The **labs** are like a maze: you’ll get lost finding the equipment more often than you actually use it.",
+                "Your **laptop** has probably had more crashes than the actual system you're studying to fix!"
+            ]
+        };
+
+        function generateFact() {
+            let facts = factsData.facts;
+            let randomIndex = Math.floor(Math.random() * facts.length);
+            let factElement = document.getElementById("fact");
+            
+            factElement.textContent = facts[randomIndex];
+            factElement.classList.add("show");
+        }
+    </script>
+
+</body>
+</html>
